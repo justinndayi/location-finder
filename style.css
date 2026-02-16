@@ -1,0 +1,11 @@
+/* Map size */
+#map {
+  height: 500px;
+  width: 100%;
+}
+
+/* Optional: smooth popup text */
+.leaflet-popup-content-wrapper {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 16px;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agents</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Header -->
+  <header class="bg-green-600 text-white p-6 shadow-md">
+     <a href="index.html">
+        <img id="profilePic" src="lion.jpg" alt="Profile"
+         class="w-10 h-10 rounded-full items-center cursor-pointer">
+    </a>
+    <h1 class="text-3xl font-bold text-center ">Rwanda Direction Finder</h1>
+    <p class="text-center mt-2">Find directions to different places in Rwanda</p>
+    <div class="text-right mt-2 ml-4 ">
+      <a class="bg-green-800 rounded hover:bg-green-600 p-4 transition" href="administr.html">Administration Offices</a>
+      <a class="bg-green-800 rounded hover:bg-green-600 p-4 transition" href="business.html">Businesses</a>
+      <a class="bg-green-800 rounded hover:bg-green-600 p-4 transition" href="clinics.html">Clinics</a>
+      <a class="bg-green-800 rounded hover:bg-green-600 p-4 transition" href="agent.html">Agents</a>
+    </div>
+  </header>
+
+   <!-- Places Section -->
+<div class="max-w-6xl mx-auto py-10 px-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+  <!-- Kigali Card -->
+  <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition">
+    <h2 class="text-xl font-bold text-green-700">Peter</h2>
+    <p class="text-gray-600 mt-2">Province: Kigali City</p>
+    <p class="text-gray-600">Distance from Kigali Convention Centre: 0 km</p>
+    <p class="text-gray-600">078999994955</p>
+    <button onclick="findLocation('Kigali')" 
+      class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+      Find Direction
+    </button>
+  </div>
+
+  <!-- Musanze Card -->
+  <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition">
+    <h2 class="text-xl font-bold text-green-700">John</h2>
+    <p class="text-gray-600 mt-2">Province: Northern Province</p>
+    <p class="text-gray-600">Distance from Kigali: 90 km</p>
+    <p class="text-gray-600">078999994955</p>
+    <button onclick="findLocation('Musanze')" 
+      class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+      Find Direction
+    </button>
+  </div>
+
+  <!-- Huye Card -->
+  <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition">
+    <h2 class="text-xl font-bold text-green-700">Jonson</h2>
+    <p class="text-gray-600 mt-2">Province: Southern Province</p>
+    <p class="text-gray-600">Distance from Kigali: 132 km</p>
+    <p class="text-gray-600">078999994955</p>
+    <button onclick="findLocation('Huye')" 
+      class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+      Find Direction
+    </button>
+  </div>
+
+  <!-- Muhanga Card -->
+  <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition">
+    <h2 class="text-xl font-bold text-green-700">Aimable</h2>
+    <p class="text-gray-600 mt-2">Province: Southern Province</p>
+    <p class="text-gray-600">Distance from Kigali: 49 km</p>
+    <p class="text-gray-600">078999994955</p>
+    <button onclick="findLocation('Muhanga')" 
+      class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+      Find Direction
+    </button>
+  </div>
+
+  <!-- Nyagatare Card -->
+  <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition">
+    <h2 class="text-xl font-bold text-green-700">Mutangana</h2>
+    <p class="text-gray-600 mt-2">Province: Eastern Province</p>
+    <p class="text-gray-600">Distance from Kigali: 135 km</p>
+    <p class="text-gray-600">078999994955</p>
+    <button onclick="findLocation('Nyagatare')" 
+      class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+      Find Direction
+    </button>
+  </div>
+
+  <!-- Gicumbi Card -->
+  <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition">
+    <h2 class="text-xl font-bold text-green-700">Gatabazi</h2>
+    <p class="text-gray-600 mt-2">Province: Northern Province</p>
+    <p class="text-gray-600">Distance from Kigali: 60 km</p>
+    <p class="text-gray-600">078999994955</p>
+    <button onclick="findLocation('Gicumbi')" 
+      class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+      Find Direction
+    </button>
+  </div>
+
+</div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
